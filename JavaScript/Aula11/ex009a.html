@@ -1,0 +1,30 @@
+<!--AULA-11-009A.html-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULADO</title>
+</head>
+<body>
+    <h1>Consulta de Nascionalidade</h1>
+    Pais de Origem: <input type="text" name="txtnas" id="txtnas">
+    <input type="button" value="Consultar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var txtn = window.document.getElementById('txtnas')
+            var res = window.document.getElementById('res')
+            var nas = String(txtn.value)
+            res.innerHTML = `<p>Sua nascionalidade: <strong>${nas}</strong></p>`
+            if (nas == 'Brasil'){
+                res.innerHTML += `<p>Você é Brasileiro </p>`
+            }
+            else{
+                res.innerHTML += `<p>Você é extrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
